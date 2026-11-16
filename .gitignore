@@ -1,0 +1,12 @@
+# IntelliJ
+.idea/
+*.iml
+
+# PHP
+vendor/composer
+composer.phar
+
+# Fichiers volumineux
+*.mp3
+*.wav
+*.pdf
