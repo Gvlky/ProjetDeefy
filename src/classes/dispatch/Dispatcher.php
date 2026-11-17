@@ -53,6 +53,7 @@ class Dispatcher
                 <li><a href="?action=default">Accueil</a></li>
                 <li><a href="?action=add-user">Inscription</a></li>
                 <li><a href="?action=display-playlist">Afficher les playlists</a></li>
+                <li><a href="?action=playlist">Afficher la playlist courante</a></li>
                 <li><a href="?action=add-playlist">Créer une playlist</a></li>            
             </ul>
         </nav>

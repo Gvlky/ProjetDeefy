@@ -15,8 +15,8 @@ class DisplayPlaylistAction extends Action
 
     public function methodeGet(): string
     {
-        if (isset($_SESSION['playlist'])) {
-            $pl = $_SESSION['playlist'];
+        if (isset($_SESSION['Playlist'])) {
+            $pl = $_SESSION['Playlist'];
             $renderer = RendererFactory::getRenderer($pl);
             return $renderer->render();
         } else {
