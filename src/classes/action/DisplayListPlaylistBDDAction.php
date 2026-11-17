@@ -16,7 +16,7 @@ class DisplayListPlaylistBDDAction extends Action{
         $html = "<ul>";
         foreach ($playlist as $pl){
             $nom = filter_var($pl->nom, FILTER_SANITIZE_SPECIAL_CHARS);
-            $html .= "<li>$nom</li>";
+            $html .= "<li><a href='?action=playlist&amp;select={$pl->id}'>$nom</a></li>";
         }
         $html .= "</ul>";
         return $html;

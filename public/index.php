@@ -3,12 +3,14 @@
 require_once "../vendor/autoload.php";
 
 // Importations via l'autoloader
+use classes\action\DisplayTrackAction;
+use classes\action\DisplayTracksPlaylistAction;
 use iutnc\minideefy\dispatch\Dispatcher;
 use iutnc\minideefy\action\DefaultAction;
 use iutnc\minideefy\action\AddPlaylistAction;
 use iutnc\minideefy\action\AddPodcastTrackAction;
 use iutnc\minideefy\action\AddUserAction;
-use iutnc\minideefy\action\DisplayPlaylistAction;
+use iutnc\minideefy\action\PlaylistAction;
 use iutnc\minideefy\repository\DeefyRepository;
 use iutnc\minideefy\action\DisplayListPlaylistBDDAction;
 
@@ -25,14 +27,13 @@ $dispatcher
     ->addRoute("add-playlist", AddPlaylistAction::class)
     ->addRoute("add-track", AddPodcastTrackAction::class)
     ->addRoute("add-user", AddUserAction::class)
-    ->addRoute("playlist", DisplayPlaylistAction::class)
+    ->addRoute("playlist", PlaylistAction::class)
     ->addRoute("display-playlist", DisplayListPlaylistBDDAction::class)
 ;
 
 // Execution
 session_start();
 $dispatcher->run();
-
 
 
 

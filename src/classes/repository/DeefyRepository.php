@@ -2,6 +2,7 @@
 
 namespace iutnc\minideefy\repository;
 
+use iutnc\minideefy\audio\lists\AudioList;
 use iutnc\minideefy\audio\tracks\AlbumTrack;
 use Exception;
 use PDO;
@@ -103,5 +104,63 @@ class DeefyRepository
         $query = "insert into playlist2track (id_pl, id_track, no_piste_dans_liste) values(?,?,?)";
         $stmt = $this->bd->prepare($query);
         $stmt->execute([$idPl, $idTrack, $noP]);
+    }
+
+    // Obtenir une AudioTrack grâce à son id
+    public function getTrack(int $id) : AudioTrack {
+        $query = "select * from track where id=? limit 1";
+        $stmt = $this->bd->prepare($query);
+        $stmt->execute([$id]);
+
+        $data = $stmt->fetch();
+        switch ($data['type']) {
+            case 'A':
+                $album = new AlbumTrack($data['titre'], $data['filename'], $data['filename'], $data['numero_album']);
+                /*
+                 * JUSTE LE GENRE ET L'ID PEUVENT ETRE MODIFIES
+                 * on aura 0 info sur les albums
+                $album->genre = null; // $data['genre'] est un str et $album->genre un int.
+                $album->duree = $data['duree'];
+                $album->annee = $data['annee_album'];
+                $album->album = $data['titre_album'];
+                $album->artiste = $data['artiste_album'];
+                */
+                return $album;
+            case 'P':
+                $podcast = new PodcastTrack($data['titre'], $data['filename'],);
+                /*
+                 * JUSTE LE GENRE ET L'ID PEUVENT ETRE MODIFIES
+                 * on aura 0 info sur les podcasts aussi
+                $podcast->genre = null; // $data['genre'] est un str et $pdocast->genre un int
+                $podcast->duree = $data['duree'];
+                $podcast->nomf = $data['filename'];
+                $podcast->date = $data['date_posdcast']; // Il y a une typo dans la BDD
+                $podcast->auteur = $data['auteur_podcast'];
+                */
+                return $podcast;
+            default:
+                throw new Exception("Cette Track n'existe pas.");
+        }
+    }
+
+    public function getPlaylist(int $id) : PlaylistList {
+        $stmt = $this->bd->prepare("select nom from playlist where id=?");
+        $stmt->execute([$id]);
+        $data = $stmt->fetch();
+
+        $pl = new PlaylistList($data['nom'], []);
+
+        $tracksQ = "select t.id as tid
+                    from track t
+                    inner join playlist2track p2t on p2t.id_track = t.id
+                    where id_pl = ? 
+                    order by no_piste_dans_liste";
+
+        $stmt = $this->bd->prepare($tracksQ);
+        $stmt->execute([$id]);
+        while ($data = $stmt->fetch()) {
+            $pl->ajouterPiste($this->getTrack($data['tid']));
+        }
+        return $pl;
     }
 }

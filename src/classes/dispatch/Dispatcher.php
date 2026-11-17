@@ -6,7 +6,7 @@ use iutnc\minideefy\action\DefaultAction;
 use iutnc\minideefy\action\AddPlaylistAction;
 use iutnc\minideefy\action\AddPodcastTrackAction;
 use iutnc\minideefy\action\DisplayListPlaylistBDDAction;
-use iutnc\minideefy\action\DisplayPlaylistAction;
+use iutnc\minideefy\action\PlaylistAction;
 use iutnc\minideefy\action\AddUserAction;
 
 class Dispatcher
