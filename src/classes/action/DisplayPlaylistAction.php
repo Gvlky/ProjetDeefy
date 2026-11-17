@@ -18,7 +18,9 @@ class DisplayPlaylistAction extends Action
         if (isset($_SESSION['Playlist'])) {
             $pl = $_SESSION['Playlist'];
             $renderer = RendererFactory::getRenderer($pl);
-            return $renderer->render();
+            $html = $renderer->render();
+            $html .= '<a href="?action=add-track">Ajouter une piste</a>';
+            return $html;
         } else {
             return "<p>Impossible d'accéder à playlist</p>";
         }
