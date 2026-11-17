@@ -7,6 +7,7 @@ use iutnc\minideefy\render\RendererFactory;
 use iutnc\minideefy\render\Renderer;
 use iutnc\minideefy\audio\tracks\PodcastTrack;
 use iutnc\minideefy\audio\lists\PlaylistList;
+use iutnc\minideefy\repository\DeefyRepository;
 
 // Ajouter 1 track dans la playlist
 class AddPodcastTrackAction extends Action
@@ -45,6 +46,9 @@ HTML;
                     $pod = new PodcastTrack($titre, "../audio/" . $nom .".mp3");
                     $pl = $_SESSION['Playlist'];
                     $pl->ajouterPiste($pod);
+                    $repo = DeefyRepository::getInstance();
+                    $repo->savePodcastTrack($pod);
+                    $repo->addTrackToPlaylist($pl->id, $pod->id);
                     $_SESSION['Playlist'] = $pl;
                     $render = RendererFactory::getRenderer($pl);
                     $retour = $render->render();
