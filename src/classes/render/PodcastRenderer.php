@@ -26,7 +26,7 @@ class PodcastRenderer extends AudioTrackRenderer
         $html .= "<li>Date : {$this->podcast->date}</li>";
         $html .= "<li>Chemin: {$this->podcast->chemin}</li>";
         $html .= "</ol>";
-        $html .= "<audio src='{$this->podcast->chemin}'></audio>";
+        $html .= "<audio controls src='{$this->podcast->chemin}'></audio>";
         return $html;
     }
 
@@ -40,7 +40,7 @@ class PodcastRenderer extends AudioTrackRenderer
         Durée : {$this->podcast->duree} s, 
         Date : {$this->podcast->date}, 
         Chemin: {$this->podcast->chemin}</p>";
-        $html .= "<audio src='{$this->podcast->chemin}'></audio>";
+        $html .= "<audio controls src='{$this->podcast->chemin}'></audio>";
         return $html;
     }
 

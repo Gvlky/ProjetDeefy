@@ -41,8 +41,8 @@ HTML;
                 if ($_FILES['userfile']['type'] === 'audio/mpeg') {
                     $titre = filter_var($_POST['titre'], FILTER_SANITIZE_SPECIAL_CHARS);
                     $nom = uniqid(); // Nom généré aléatoirement
-                    move_uploaded_file($_FILES['userfile']['tmp_name'], "audio/" . $nom .".mp3");
-                    $pod = new PodcastTrack($titre, "audio/" . $nom .".mp3");
+                    move_uploaded_file($_FILES['userfile']['tmp_name'], __DIR__ . "/../../../audio/" . $nom .".mp3");
+                    $pod = new PodcastTrack($titre, "../audio/" . $nom .".mp3");
                     $pl = $_SESSION['Playlist'];
                     $pl->ajouterPiste($pod);
                     $_SESSION['Playlist'] = $pl;
