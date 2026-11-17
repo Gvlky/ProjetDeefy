@@ -10,3 +10,5 @@ composer.phar
 *.mp3
 *.wav
 *.pdf
+
+/config
