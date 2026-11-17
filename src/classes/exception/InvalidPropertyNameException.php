@@ -1,6 +1,6 @@
 <?php
 
-namespace iutnc\deefy\exception;
+namespace iutnc\minideefy\exception;
 use \Exception;
 use \Throwable;
 

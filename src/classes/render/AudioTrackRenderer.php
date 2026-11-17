@@ -1,5 +1,5 @@
 <?php
-namespace iutnc\deefy\render;
+namespace iutnc\minideefy\render;
 abstract class AudioTrackRenderer implements Renderer
 {
     public function render(int $selector): string

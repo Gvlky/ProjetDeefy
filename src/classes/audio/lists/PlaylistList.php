@@ -1,9 +1,9 @@
 <?php
 
-namespace iutnc\deefy\audio\lists;
+namespace iutnc\minideefy\audio\lists;
 
-use iutnc\deefy\audio\tracks\AudioTrack;
-use iutnc\deefy\exception\InvalidPropertyNameException;
+use iutnc\minideefy\audio\tracks\AudioTrack;
+use iutnc\minideefy\exception\InvalidPropertyNameException;
 
 class PlaylistList extends AudioList
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace iutnc\deefy\action;
+namespace iutnc\minideefy\action;
 
 use Exception;
-use iutnc\deefy\render\RendererFactory;
-use iutnc\deefy\render\Renderer;
-use iutnc\deefy\audio\tracks\PodcastTrack;
-use iutnc\deefy\audio\lists\PlaylistList;
+use iutnc\minideefy\render\RendererFactory;
+use iutnc\minideefy\render\Renderer;
+use iutnc\minideefy\audio\tracks\PodcastTrack;
+use iutnc\minideefy\audio\lists\PlaylistList;
 
 // Ajouter 1 track dans la playlist
 class AddPodcastTrackAction extends Action

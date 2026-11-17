@@ -1,5 +1,5 @@
 <?php
-namespace iutnc\deefy\audio\tracks;
+namespace iutnc\minideefy\audio\tracks;
 
 class AlbumTrack extends AudioTrack
 {

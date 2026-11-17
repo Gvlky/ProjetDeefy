@@ -1,9 +1,9 @@
 <?php
 
-namespace iutnc\deefy\audio\lists;
+namespace iutnc\minideefy\audio\lists;
 
 use Iterator;
-use iutnc\deefy\exception\InvalidPropertyNameException;
+use iutnc\minideefy\exception\InvalidPropertyNameException;
 
 class AudioList implements Iterator
 {

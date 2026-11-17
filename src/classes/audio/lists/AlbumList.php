@@ -1,6 +1,6 @@
 <?php
-namespace iutnc\deefy\audio\lists;
-use iutnc\deefy\exception\InvalidPropertyValueException;
+namespace iutnc\minideefy\audio\lists;
+use iutnc\minideefy\exception\InvalidPropertyValueException;
 
 
 class AlbumList extends AudioList

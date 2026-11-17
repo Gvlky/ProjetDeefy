@@ -1,7 +1,7 @@
 <?php
 
-namespace iutnc\deefy\render;
-use iutnc\deefy\audio\lists\AudioList;
+namespace iutnc\minideefy\render;
+use iutnc\minideefy\audio\lists\AudioList;
 
 class AudioListRenderer implements Renderer
 {
