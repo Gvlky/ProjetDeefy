@@ -1,0 +1,7 @@
+Membre du groupe :
+Galkyne Antonin
+Bernard Aaron
+
+Fonctionnalités :
+1. mes playlists : affiche la liste des playlists enregistrées en base de données ;
+- par Aaron
