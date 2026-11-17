@@ -6,6 +6,10 @@
 
 
 ### Répartition du travail :
-|   Fonctionalité  | Antonin | Aaron | Commentaire |
-|:-----------------|:-------:|:-----:|:------------|
-| 1: Mes playlists | |  [X]  |             |
+| Fonctionalité | Antonin | Aaron | Commentaire |
+|:--|:-:|:-:|:--|
+| 1. Liste de playlist| |  [X]  |             |
+| 2. Playlist clickable|| | |
+| 3. Ajouter une nouvelle piste|| | | 
+| 4. Créer playlist| |[X] | |
+| 5. Playlist courante| | | |
