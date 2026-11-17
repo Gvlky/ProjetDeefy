@@ -5,6 +5,7 @@ namespace iutnc\deefy\dispatch;
 use iutnc\deefy\action\AddPlaylistAction;
 use iutnc\deefy\action\AddPodcastTrackAction;
 use iutnc\deefy\action\DefaultAction;
+use iutnc\deefy\action\DisplayListPlaylistBDDAction;
 use iutnc\deefy\action\DisplayPlaylistAction;
 use iutnc\deefy\action\AddUserAction;
 
@@ -41,6 +42,10 @@ class Dispatcher
                 $addU = new AddUserAction();
                 $resultat = $addU();
                 break;
+            case "display-playlist":
+                $display = new DisplayListPlaylistBDDAction();
+                $resultat = $display();
+                break;
         }
         $this->renderPage($resultat);
     }
@@ -60,6 +65,7 @@ class Dispatcher
             <nav><ul>
                 <li><a href="?action=default">Accueil</a></li>
                 <li><a href="?action=add-user">Inscription</a></li>
+                <li><a href="?action=display-playlist">Afficher les playlists</a></li>
                 <li><a href="?action=add-playlist">Créer une playlist</a></li>
             </ul></nav>
         $html
