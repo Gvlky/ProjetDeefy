@@ -24,7 +24,7 @@ $dispatcher
     ->addRoute("add-playlist", AddPlaylistAction::class)
     ->addRoute("add-track", AddPodcastTrackAction::class)
     ->addRoute("add-user", AddUserAction::class)
-    ->addRoute("playlists", DisplayPlaylistAction::class)
+    ->addRoute("display-playlists", DisplayPlaylistAction::class)
 ;
 
 // Execution
