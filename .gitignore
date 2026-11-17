@@ -3,7 +3,7 @@
 *.iml
 
 # PHP
-vendor/composer
+/vendor/
 composer.phar
 
 # Fichiers volumineux
