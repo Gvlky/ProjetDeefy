@@ -1,7 +1,7 @@
 <?php
-namespace iutnc\deefy\action;
+namespace iutnc\minideefy\action;
 
-use iutnc\deefy\repository\DeefyRepository;
+use iutnc\minideefy\repository\DeefyRepository;
 
 /**
  * Classe permettant d'afficher toutes les playlists de la BDD

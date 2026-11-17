@@ -10,6 +10,7 @@ use iutnc\minideefy\action\AddPodcastTrackAction;
 use iutnc\minideefy\action\AddUserAction;
 use iutnc\minideefy\action\DisplayPlaylistAction;
 use iutnc\minideefy\repository\DeefyRepository;
+use iutnc\minideefy\action\DisplayListPlaylistBDDAction;
 
 
 // Connexion avec la base de données
@@ -24,7 +25,8 @@ $dispatcher
     ->addRoute("add-playlist", AddPlaylistAction::class)
     ->addRoute("add-track", AddPodcastTrackAction::class)
     ->addRoute("add-user", AddUserAction::class)
-    ->addRoute("display-playlists", DisplayPlaylistAction::class)
+    ->addRoute("playlist", DisplayPlaylistAction::class)
+    ->addRoute("display-playlist", DisplayListPlaylistBDDAction::class)
 ;
 
 // Execution
