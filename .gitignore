@@ -1,5 +1,11 @@
+# fichier intellij
 .idea/
 
+#autoload
 /vendor/
 
+# composer
 *.lock
+
+# document du projet (énoncé)
+*.pdf
