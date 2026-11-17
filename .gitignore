@@ -3,10 +3,12 @@
 *.iml
 
 # PHP
-vendor/composer
+/vendor/
 composer.phar
 
 # Fichiers volumineux
 *.mp3
 *.wav
 *.pdf
+
+/config
