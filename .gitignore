@@ -1,11 +1,14 @@
-# fichier intellij
+# IntelliJ
 .idea/
+*.iml
 
-#autoload
-/vendor/
+# PHP
+vendor/
+composer.lock
 
-# composer
-*.lock
-
-# document du projet (énoncé)
+# Fichiers volumineux
 *.pdf
+composer.phar
+
+# Sécurité
+config/
