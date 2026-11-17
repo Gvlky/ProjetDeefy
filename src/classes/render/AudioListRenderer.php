@@ -20,7 +20,7 @@ class AudioListRenderer implements Renderer
             $trackRenderer = RendererFactory::getRenderer($piste);
             $s = $s . $trackRenderer->render(Renderer::COMPACT);
         }
-
+        $s .= "<br>";
         $s = $s . "Nombre de pistes : " . $this->al->nbpistes . "<br>";
         $s = $s . "Durée totale : " . $this->al->dureeTotale . "<br>";
         return $s;
