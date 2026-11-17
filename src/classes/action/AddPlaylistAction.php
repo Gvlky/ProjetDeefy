@@ -1,9 +1,9 @@
 <?php
 
-namespace iutnc\deefy\action;
+namespace iutnc\minideefy\action;
 
-use iutnc\deefy\audio\lists\PlaylistList;
-use iutnc\deefy\render\RendererFactory;
+use iutnc\minideefy\audio\lists\PlaylistList;
+use iutnc\minideefy\render\RendererFactory;
 
 // Creer 1 playlist en session
 class AddPlaylistAction extends Action

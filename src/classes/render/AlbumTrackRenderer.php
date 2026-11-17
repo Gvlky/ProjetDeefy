@@ -1,8 +1,8 @@
 <?php
 
-namespace iutnc\deefy\render;
+namespace iutnc\minideefy\render;
 
-use iutnc\deefy\audio\tracks\AlbumTrack;
+use iutnc\minideefy\audio\tracks\AlbumTrack;
 
 class AlbumTrackRenderer extends AudioTrackRenderer
 {

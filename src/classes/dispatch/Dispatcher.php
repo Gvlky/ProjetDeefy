@@ -1,12 +1,12 @@
 <?php
 
-namespace iutnc\deefy\dispatch;
+namespace iutnc\minideefy\dispatch;
 
-use iutnc\deefy\action\AddPlaylistAction;
-use iutnc\deefy\action\AddPodcastTrackAction;
-use iutnc\deefy\action\DefaultAction;
-use iutnc\deefy\action\DisplayPlaylistAction;
-use iutnc\deefy\action\AddUserAction;
+use iutnc\minideefy\action\AddPlaylistAction;
+use iutnc\minideefy\action\AddPodcastTrackAction;
+use iutnc\minideefy\action\DefaultAction;
+use iutnc\minideefy\action\DisplayPlaylistAction;
+use iutnc\minideefy\action\AddUserAction;
 
 class Dispatcher
 {

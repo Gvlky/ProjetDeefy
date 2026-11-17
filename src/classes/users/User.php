@@ -1,5 +1,5 @@
 <?php
-namespace iutnc\deefy\users;
+namespace iutnc\minideefy\users;
 
 class User{
     private ?int $id = null;

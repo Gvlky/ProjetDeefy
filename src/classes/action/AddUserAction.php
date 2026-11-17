@@ -1,6 +1,6 @@
 <?php
 
-namespace iutnc\deefy\action;
+namespace iutnc\minideefy\action;
 
 class AddUserAction extends Action{
     

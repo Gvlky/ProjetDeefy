@@ -1,8 +1,8 @@
 <?php
 
-namespace iutnc\deefy\action;
+namespace iutnc\minideefy\action;
 
-use iutnc\deefy\render\RendererFactory;
+use iutnc\minideefy\render\RendererFactory;
 
 // Afficher la playlist en session
 class DisplayPlaylistAction extends Action

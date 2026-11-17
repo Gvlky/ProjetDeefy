@@ -1,13 +1,13 @@
 <?php
 
-namespace iutnc\deefy\repository;
+namespace iutnc\minideefy\repository;
 
-use iutnc\deefy\audio\tracks\AlbumTrack;
+use iutnc\minideefy\audio\tracks\AlbumTrack;
 use Exception;
 use PDO;
-use iutnc\deefy\audio\lists\PlaylistList;
-use iutnc\deefy\audio\tracks\AudioTrack;
-use iutnc\deefy\audio\tracks\PodcastTrack;
+use iutnc\minideefy\audio\lists\PlaylistList;
+use iutnc\minideefy\audio\tracks\AudioTrack;
+use iutnc\minideefy\audio\tracks\PodcastTrack;
 
 class DeefyRepository
 {
