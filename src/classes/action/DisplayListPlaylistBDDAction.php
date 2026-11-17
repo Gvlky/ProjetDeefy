@@ -15,7 +15,8 @@ class DisplayListPlaylistBDDAction extends Action{
         $playlist = $repo->findAllPlayLists();
         $html = "<ul>";
         foreach ($playlist as $pl){
-            $html .= "<li>$pl->nom </li>";
+            $nom = filter_var($pl->nom, FILTER_SANITIZE_SPECIAL_CHARS);
+            $html .= "<li>$nom</li>";
         }
         $html .= "</ul>";
         return $html;
