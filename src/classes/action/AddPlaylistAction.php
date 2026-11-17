@@ -4,6 +4,7 @@ namespace iutnc\minideefy\action;
 
 use iutnc\minideefy\audio\lists\PlaylistList;
 use iutnc\minideefy\render\RendererFactory;
+use iutnc\minideefy\repository\DeefyRepository;
 
 // Creer 1 playlist en session
 class AddPlaylistAction extends Action
@@ -29,6 +30,8 @@ class AddPlaylistAction extends Action
     {
         $nom = filter_var($_POST['nomPlaylist'], FILTER_SANITIZE_SPECIAL_CHARS);
         $pl = new PlaylistList($nom, []);
+        $repo = DeefyRepository::getInstance();
+        $repo->saveEmptyPlayList($pl);
         $_SESSION['Playlist'] = $pl;
         $render = RendererFactory::getRenderer($pl);
         $retour = $render->render();
