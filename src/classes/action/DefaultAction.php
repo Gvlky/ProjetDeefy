@@ -4,10 +4,11 @@ namespace iutnc\minideefy\action;
 
 class DefaultAction extends Action
 {
-
     public function methodeGet(): string
     {
-        return"<h1>Bienvenue !</h1>";
+        return <<<HTML
+        <h1>Bienvenue !</h1>
+        HTML;
     }
     public function methodePost(): string
     {

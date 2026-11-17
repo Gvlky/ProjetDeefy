@@ -22,7 +22,7 @@ class AddPlaylistAction extends Action
             <input type='text' name="nomPlaylist" id="nomPlaylist" required>
             <button type="submit"> Créer </button>
         </form>
-HTML;
+        HTML;
     }
 
     public function methodePost(): string
