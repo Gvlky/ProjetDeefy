@@ -1,5 +1,5 @@
 # ProjetDeefy
 
 Membre du groupe :
-Antonin Galkyne
+Antonin Galkyne,
 Aaron Bernard
