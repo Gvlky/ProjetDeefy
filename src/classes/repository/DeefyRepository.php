@@ -149,6 +149,7 @@ class DeefyRepository
         $data = $stmt->fetch();
 
         $pl = new PlaylistList($data['nom'], []);
+        $pl->id = $id;
 
         $tracksQ = "select t.id as tid
                     from track t
