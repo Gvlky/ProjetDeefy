@@ -1,3 +1,5 @@
 # ProjetDeefy
 
-Coming soon...
+Membre du groupe :
+Antonin Galkyne
+Aaron Bernard
