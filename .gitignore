@@ -7,9 +7,12 @@
 composer.phar
 
 # Fichiers volumineux
-# Fichiers volumineux
 *.mp3
 *.wav
 *.pdf
 
-/config
+# Fichier de connexion
+*.ini
+
+# Fichier .htaccess
+*.htaccess
