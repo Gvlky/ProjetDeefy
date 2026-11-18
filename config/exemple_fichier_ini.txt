@@ -3,6 +3,6 @@ Il faut afficher .ini contenant ce qu'il y a en dessous
 (c'est un exemple, mettez les informations correspondantes à votre cas) :
 driver=mysql
 host=localhost
-dbname=deefy
+data=deefy
 username=user
 password=mdp
