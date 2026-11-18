@@ -1,4 +1,4 @@
-# IntelliJ
+# fichier intellij
 .idea/
 *.iml
 
@@ -6,6 +6,7 @@
 /vendor/
 composer.phar
 
+# Fichiers volumineux
 # Fichiers volumineux
 *.mp3
 *.wav
