@@ -1,5 +1,5 @@
 Pour se connecter à la BDD
-Il faut afficher .ini contenant ce qu'il y a en dessous
+Il faut un fichier .ini contenant ce qu'il y a en dessous
 (c'est un exemple, mettez les informations correspondantes à votre cas) :
 driver=mysql
 host=localhost
